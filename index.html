@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기억의 하이퍼링크: 부산 원도심 아카이브</title>
+    <style>
+        /* 기본 스타일 설정 */
+        :root {
+            --bg-paper: #f2ede4; /* 바랜 종이색 */
+            --deep-brown: #3d2b1f; /* 짙은 서가색 */
+            --point-red: #8c4a4a; /* 중후한 레드 */
+            --text-main: #2c241e;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background-color: var(--bg-paper);
+            color: var(--text-main);
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* 네비게이션 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(61, 43, 31, 0.95);
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #d9c5b2;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        /* 헤더 (히어로 섹션) */
+        header {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1600') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            background: var(--point-red);
+            padding: 8px 20px;
+            border-radius: 2px;
+        }
+
+        /* 섹션 공통 스타일 */
+        section {
+            padding: 100px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--deep-brown);
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--point-red);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 8px 8px 0px rgba(61, 43, 31, 0.1);
+            border: 1px solid #d9d0c1;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: var(--point-red);
+            font-weight: bold;
+        }
+
+        /* 타임라인 스타일 (영도) */
+        .timeline {
+            margin-top: 20px;
+            padding-left: 20px;
+            border-left: 2px dashed var(--deep-brown);
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: var(--point-red);
+            display: block;
+        }
+
+        footer {
+            background: var(--deep-brown);
+            color: #d9c5b2;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            nav ul li { margin: 0 10px; }
+            nav ul li a { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#intro">소개</a></li>
+            <li><a href="#problem">문제의식</a></li>
+            <li><a href="#semantic">방법론</a></li>
+            <li><a href="#bosudong">보수동</a></li>
+            <li><a href="#yeongdo">영도</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>기억의 하이퍼링크</h1>
+        <p>부산 원도심, 시맨틱 데이터로 깨어나는 시간</p>
+    </header>
+
+    <section id="intro">
+        <h2>[INTRO] 시간을 걷는 아키비스트</h2>
+        <div class="card">
+            <p>차가운 데이터로 따뜻한 사람의 기억을 복원합니다.<br>
+            이 프로젝트는 부산 원도심의 파편화된 기록들을 연결하여 살아 숨 쉬는 <strong>'의미 기반 생태계'</strong>를 구축하는 기록입니다.</p>
+        </div>
+    </section>
+
+    <section id="problem">
+        <h2>소멸 위기의 원도심</h2>
+        <div class="card">
+            <p>기존의 '물리적 환경 개선' 중심의 도시재생은 골목의 외형을 바꿀 순 있어도, 그 안에 축적된 <span class="highlight">사람과 역사의 관계망</span>을 지켜내지 못하고 있습니다.</p>
+            <ul style="margin-top:20px; list-style-position: inside;">
+                <li><strong>보수동:</strong> 젠트리피케이션으로 인한 책방골목의 존립 위기</li>
+                <li><strong>영도:</strong> 산업 구조 변화로 인한 대평동 수리조선업의 쇠퇴</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="semantic">
+        <h2>새로운 렌즈: 시맨틱 데이터</h2>
+        <div class="card">
+            <p>우리는 건축물 보수(Physical)를 넘어 텍스트, 인물, 장소, 사건 간의 <span class="highlight">의미 연결망(Semantic Network)</span>을 구축합니다.</p>
+            <p style="margin-top:15px;">파편화된 도시의 역사를 구조화하여 지역을 단순한 공간이 아닌 '살아있는 유기체'로 재해석합니다.</p>
+        </div>
+    </section>
+
+    <section id="bosudong">
+        <h2>보수동: 지식 유통의 거점</h2>
+        <div class="card">
+            <p>보수동은 단순한 헌책방 거리가 아닙니다. 피란 시절부터 이어온 <span class="highlight">학문적 갈증</span>과 <span class="highlight">기록의 역사</span>가 담긴 정신적 아카이브입니다.</p>
+            <p style="margin-top:10px; font-style: italic; color: #666;">"헌책의 물리적 질감 속에 담긴 시대의 위로"</p>
+        </div>
+    </section>
+
+    <section id="yeongdo">
+        <h2>영도: 해양과 노동의 시간표</h2>
+        <div class="card">
+            <p>조선업의 흥망성쇠와 노동자들의 땀방울이 축적된 해양 노동 생태계의 산실입니다.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-year">1934</span>
+                    <p>영도대교 준공, 항만도시의 관문이 되다.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1960-70s</span>
+                    <p>'깡깡이 아지매'의 노동 - 수리조선업의 핵심 동력.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2018</span>
+                    <p>깡깡이생활문화센터 개관 - 노동의 기억을 문화 자산으로.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 기억의 하이퍼링크 Project. All Rights Reserved.</p>
+        <p style="margin-top:10px; opacity: 0.7;">Created based on NotebookLM Insights</p>
+    </footer>
+
+</body>
+</html>
